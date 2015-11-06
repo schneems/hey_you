@@ -26,7 +26,7 @@ Or install it yourself as:
 
 Somewhere in your code you can run:
 
-```
+```ruby
 HeyYou.new.listen do |payload|
   puts "Hey I got a message: #{payload}"
 end
@@ -36,13 +36,13 @@ This will spin up a new thread and periodically check for a notification, this w
 
 Then in another console, you can run:
 
-```
+```ruby
 HeyYou.new.notify("sup")
 ```
 
 When your listening process gets the message it will print out
 
-```
+```ruby
 "Hey I got a message: sup"
 ```
 
@@ -56,13 +56,13 @@ end
 
 It is important to note that you need to notify against the same name.
 
-```
+```ruby
 HeyYou.new(channel: "new_channel_name").notify("sup")
 ```
 
 By default the background thread wakes up every 60 seconds and waits 0.1 seconds to see if there is a message. You can customize this behavior using `sleep` and `ttl`. So to have it check every 10 seconds, and not wait at all you could run
 
-```
+```ruby
 HeyYou.new(ttl: 1, sleep: 10).listen do |payload|
   puts "Hey I got a message: #{payload}"
 end
