@@ -35,6 +35,7 @@ class HeyYou
       end
     end
   end
+  alias :watch :listen
 
   def notify(payload)
     message = "NOTIFY #{channel}, '#{payload}'"
