@@ -1,5 +1,7 @@
 # HeyYou
 
+[![Build Status](https://travis-ci.org/schneems/hey_you.svg?branch=master)](https://travis-ci.org/schneems/hey_you)
+
 Use postgres to [LISTEN/NOTIFY](http://www.postgresql.org/docs/9.1/static/sql-notify.html) to trigger custom events.
 
 ## Why?
