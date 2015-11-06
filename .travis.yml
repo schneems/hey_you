@@ -2,3 +2,6 @@ language: ruby
 rvm:
   - 2.2.3
 before_install: gem install bundler -v 1.10.6
+
+before_script:
+  - psql -c 'create database hey_you_test;' -U postgres
